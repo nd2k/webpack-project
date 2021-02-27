@@ -1,3 +1,5 @@
+import './styles/index.scss';
+
 const myObj = {
   name: 'test',
   age: 12,
