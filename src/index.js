@@ -3,8 +3,10 @@ import './styles/index.scss';
 
 // Components
 import Navbar from './components/navbar/navbar';
+import Button from './components/button/button';
 
 customElements.define('my-navbar', Navbar);
+customElements.define('my-btn', Button);
 
 // Views
 import Layout from './views/layout/layout';

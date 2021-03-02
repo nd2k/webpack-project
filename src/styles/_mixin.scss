@@ -1,0 +1,25 @@
+@import './variables.scss';
+
+@mixin colorBtn($color) {
+  background-color: $color;
+  border: 1px solid rgba($color, $alpha: 0.4);
+  &:hover {
+    background-color: darken($color, 4%);
+  }
+  &:active {
+    background-color: darken($color, 4%);
+    box-shadow: 0 2px $greyShadow;
+    transform: translateY(4px);
+  }
+}
+
+@mixin disabledBtn {
+  border: 1px solid $greyShadow;
+  background-color: $disabledBg;
+  color: $disabledColor;
+  &:hover {
+    border: 1px solid $greyShadow;
+    background-color: $disabledBg;
+    color: $disabledColor;
+  }
+}
