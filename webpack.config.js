@@ -23,6 +23,9 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            plugins: ['@babel/plugin-proposal-class-properties'],
+          },
         },
       },
       {
@@ -37,14 +40,17 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        include: [path.resolve(__dirname, './src/components')],
-         use: [
-          "sass-to-string",
+        include: [
+          path.resolve(__dirname, './src/components'),
+          path.resolve(__dirname, './src/views'),
+        ],
+        use: [
+          'sass-to-string',
           {
-            loader: "sass-loader",
+            loader: 'sass-loader',
             options: {
               sassOptions: {
-                outputStyle: "compressed",
+                outputStyle: 'compressed',
               },
             },
           },
@@ -67,5 +73,6 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: './dist',
+    historyApiFallback: true,
   },
 };

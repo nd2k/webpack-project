@@ -3,7 +3,8 @@
 body {
   margin: 0;
   background-color: variables.$lighter-green;
-  font-size: 26px;
+  font-size: variables.$font-size;
+  font-family: variables.$font-family
 }
 
 main {

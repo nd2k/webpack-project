@@ -1,6 +1,6 @@
-import eventBus from '../../utils/eventBus';
 import navbarLayout from './navbar.html';
 import navbarStyle from './navbar.scss';
+import { activeLink } from '../../utils/activeLink';
 
 const style = document.createElement('style');
 style.innerText = navbarStyle;
@@ -20,9 +20,11 @@ export default class Navbar extends HTMLElement {
   connectedCallback() {
     this.links.forEach((targetLink) => {
       targetLink.addEventListener('click', () => {
-        eventBus.dispatchEvent('navigation-event', {
-          detail: { test: 'test' },
-        });
+        let optionalCurrentActiveLink = this.shadowRoot.querySelector(
+          '.active'
+        );
+        console.log(optionalCurrentActiveLink);
+        activeLink(optionalCurrentActiveLink, targetLink);
       });
     });
   }
