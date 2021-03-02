@@ -9,3 +9,13 @@ export const render = (layoutTemplate, layoutStyle, idSelector) => {
   node.appendChild(template.content);
   return node;
 };
+
+export const renderWebComponent = (layoutTemplate, layoutStyle, node) => {
+  const style = document.createElement('style');
+  style.innerHTML = layoutStyle;
+  const template = document.createElement('template');
+  template.innerHTML = layoutTemplate;
+  node.attachShadow({ mode: 'open' });
+  node.shadowRoot.appendChild(style.cloneNode(true));
+  node.shadowRoot.appendChild(template.content.cloneNode(true));
+};
