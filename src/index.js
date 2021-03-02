@@ -1,14 +1,7 @@
 import './styles/index.scss';
 
-const myObj = {
-  name: 'test',
-  age: 12,
-};
+import Navbar from './components/navbar/navbar';
+import Component from '../src/components/component';
 
-const myObj2 = {
-  ...myObj,
-  prop: true,
-};
-
-console.log(myObj);
-console.log(myObj2);
+customElements.define('my-navbar', Navbar);
+customElements.define('my-component', Component);

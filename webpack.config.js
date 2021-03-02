@@ -27,12 +27,32 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
+        include: [path.resolve(__dirname, './src/styles')],
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
           'postcss-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.s[ac]ss$/i,
+        include: [path.resolve(__dirname, './src/components')],
+         use: [
+          "sass-to-string",
+          {
+            loader: "sass-loader",
+            options: {
+              sassOptions: {
+                outputStyle: "compressed",
+              },
+            },
+          },
+        ],
+      },
+      {
+        test: /\.html$/,
+        use: ['html-loader'],
       },
     ],
   },
@@ -43,7 +63,7 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   devServer: {
     hot: true,
     contentBase: './dist',

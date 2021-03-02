@@ -1,5 +1,19 @@
-:root {
-  --text: #222;
-}
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
 
-$bg: peachpuff;
+$white: #ffffff;
+$black: #212529;
+$dark-grey: #2f3e46;
+$light-grey: #354f52;
+$dark-green: #52796f;
+$light-green: #84a98c;
+$lighter-green: #cad2c5;
+$orange: #fb8500;
+
+//greys
+$greyShadow: #999999;
+$disabledBg: #cccccc;
+$disabledColor: #666666;
+
+//font
+$font-family: 'Ubuntu', sans-serif;
+$font-size: 1rem;
