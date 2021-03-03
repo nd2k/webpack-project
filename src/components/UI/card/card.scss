@@ -1,0 +1,38 @@
+@use '../../../styles/variables.scss';
+
+.card {
+  border-radius: 20px;
+  background-color: variables.$white;
+  box-shadow: 20px 40px 60px rgba(variables.$greyShadow, 0.2),
+    10px 20px 30px rgba(variables.$greyShadow, 0.5);
+  &.short {
+    width: 25%;
+  }
+  &.medium {
+    width: 50%;
+  }
+  &.large {
+    width: 100%;
+  }
+  .header {
+    padding: 1rem 0 1rem 2rem;
+    color: variables.$white;
+    background-color: variables.$dark-grey;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-weight: 600;
+  }
+  .content {
+    padding: 2rem 1rem;
+    text-align: justify;
+    text-justify: auto;
+  }
+  .footer {
+    padding: 1rem 0 1rem 2rem;
+    color: variables.$white;
+    background-color: variables.$dark-grey;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    font-weight: 600;
+  }
+}

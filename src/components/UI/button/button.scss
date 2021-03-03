@@ -1,0 +1,43 @@
+@use '../../../styles/variables.scss';
+@use '../../../styles/mixin.scss';
+
+button {
+  color: variables.$white;
+  font-size: variables.$font-size;
+  font-weight: 500;
+  border-radius: 10px;
+  padding: 0.8rem;
+  box-shadow: 0 6px variables.$greyShadow;
+  outline: none;
+  cursor: pointer;
+  &.short {
+    width: 4rem;
+  }
+  &.medium {
+    width: 8rem;
+  }
+  &.large {
+    width: 12rem;
+  }
+  &.orange {
+    @include mixin.colorBtn(variables.$orange);
+  }
+  &.lighter-green {
+    @include mixin.colorBtn(variables.$lighter-green);
+  }
+  &.light-green {
+    @include mixin.colorBtn(variables.$light-green);
+  }
+  &.dark-green {
+    @include mixin.colorBtn(variables.$dark-green);
+  }
+  &.light-grey {
+    @include mixin.colorBtn(variables.$light-grey);
+  }
+  &.dark-grey {
+    @include mixin.colorBtn(variables.$dark-grey);
+  }
+  &.disabled {
+    @include mixin.disabledBtn;
+  }
+}

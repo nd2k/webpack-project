@@ -1,0 +1,79 @@
+@use '../../../styles/variables';
+@use '../../../styles//mixin';
+
+.form-field {
+  position: relative;
+  .form-control {
+    background-color: transparent;
+    font-size: variables.$font-size;
+    border: none;
+    width: 100%;
+    height: 2rem;
+    border-bottom: 1px solid variables.$dark-grey;
+    &:focus,
+    &.has-value {
+      outline: none;
+      border-width: 2px;
+      transition: all 0.2s ease-out;
+      + label {
+        top: -0.5rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+  label {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.2s ease-out;
+    font-style: italic;
+  }
+  .invalid {
+    background-color: rgba(red, 0.3);
+  }
+
+  .error-message {
+    display: none;
+    color: red;
+    font-size: 0.7rem;
+    margin-top: 0;
+    text-align: left;
+  }
+  &.orange-label {
+    @include mixin.colorLabel(variables.$orange);
+  }
+  &.light-grey-label {
+    @include mixin.colorLabel(variables.$light-grey);
+  }
+  &.dark-green-label {
+    @include mixin.colorLabel(variables.$dark-green);
+  }
+  &.light-green-label {
+    @include mixin.colorLabel(variables.$light-green);
+  }
+  &.lighter-green-label {
+    @include mixin.colorLabel(variables.$lighter-green);
+  }
+  &.black-label {
+    @include mixin.colorLabel(variables.$black);
+  }
+  &.orange-input {
+    @include mixin.colorInput(variables.$orange);
+  }
+  &.light-grey-input {
+    @include mixin.colorInput(variables.$light-grey);
+  }
+  &.dark-green-input {
+    @include mixin.colorInput(variables.$dark-green);
+  }
+  &.light-green-input {
+    @include mixin.colorInput(variables.$light-green);
+  }
+  &.lighter-green-input {
+    @include mixin.colorInput(variables.$lighter-green);
+  }
+  &.black-input {
+    @include mixin.colorInput(variables.$black);
+  }
+}

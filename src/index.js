@@ -3,10 +3,16 @@ import './styles/index.scss';
 
 // Components
 import Navbar from './components/navbar/navbar';
-import Button from './components/button/button';
+import Card from './components/UI/card/card';
+import Button from './components/UI/button/button';
+import Form from './components/UI/form/form';
+import FormField from './components/UI/form-field/form-field';
 
 customElements.define('my-navbar', Navbar);
+customElements.define('my-card', Card);
 customElements.define('my-btn', Button);
+customElements.define('my-form', Form);
+customElements.define('my-form-field', FormField);
 
 // Views
 import Layout from './views/layout/layout';
@@ -17,7 +23,6 @@ const layout = new Layout();
 
 // Router & routes
 import Router from './router/router';
-import dashboard from './views/dashboard/dashboard';
 
 const routes = [
   {

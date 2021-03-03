@@ -1,7 +1,7 @@
 import buttonStyle from './button.scss';
 import buttonlayout from './button.html';
-import eventBus from '../../utils/eventBus';
-import { renderWebComponent } from '../../utils/render';
+import eventBus from '../../../utils/eventBus';
+import { renderWebComponent } from '../../../utils/render';
 
 class Button extends HTMLElement {
   constructor() {
@@ -68,16 +68,8 @@ class Button extends HTMLElement {
   }
 
   handleClick() {
-    const event = new CustomEvent(`${this.name}-custom-event`, {
-      detail: {
-        name: this.name,
-      },
-    });
-    console.log(event);
-    eventBus.dispatchEvent(`${this.name}-custom-event`, {
-      detail: {
-        name: this.name,
-      },
+    eventBus.dispatchEvent(`${this.name}-btn-event`, {
+      name: this.name,
     });
   }
 }

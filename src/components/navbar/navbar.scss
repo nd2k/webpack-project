@@ -1,14 +1,14 @@
-@import '../../styles/variables';
+@use '../../styles/variables';
 
 nav {
-  color: $white;
+  color: variables.$white;
   font-weight: 500;
-  box-shadow: -5px 10px 5px $greyShadow;
+  box-shadow: -5px 10px 5px variables.$greyShadow;
   min-height: 4rem;
   font-size: 1.2rem;
   font-weight: 700;
-  background-color: $light-green;
-  border-bottom: 1px solid darken($light-green, 5%);
+  background-color: variables.$light-green;
+  border-bottom: 1px solid darken(variables.$light-green, 5%);
   .container {
     display: flex;
     align-items: center;
@@ -20,7 +20,7 @@ nav {
       text-align: center;
       a {
         text-decoration: none;
-        color: $white;
+        color: variables.$white;
       }
     }
     .navMenu {
@@ -32,17 +32,17 @@ nav {
           margin: 0 1.2rem;
           cursor: pointer;
           a {
-            color: $white;
+            color: variables.$white;
             text-decoration: none;
             &:hover {
-              color: orange;
+              color: variables.$orange;
               padding-bottom: 1.2rem;
-              border-bottom: 3px solid orange;
+              border-bottom: 3px solid variables.$orange;
             }
             &.active {
-              color: orange;
+              color: variables.$orange;
               padding-bottom: 1.2rem;
-              border-bottom: 3px solid orange;
+              border-bottom: 3px solid variables.$orange;
             }
           }
         }

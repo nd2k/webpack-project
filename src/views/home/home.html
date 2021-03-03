@@ -1,2 +1,61 @@
-<h1>Home</h1>
-<my-btn name="adele" color="dark-grey" size="large">Adele</my-btn>
+<my-card header="true" footer="false" size="large">
+  <span slot="header">Enter a new expense</span>
+  <span slot="content">
+    <my-form>
+      <my-form-field
+        class="field"
+        name="id"
+        label="Id"
+        error="Field is required"
+        type="password"
+        size="medium"
+        color-label="orange"
+        color-input="dark-grey"
+      ></my-form-field>
+      <my-form-field
+        class="field"
+        name="name"
+        label="Name"
+        error="Field is required"
+        type="password"
+        size="medium"
+        color-label="orange"
+        color-input="dark-grey"
+      ></my-form-field>
+    </my-form>
+    <div class="btn">
+      <my-btn name="getData" color="light-green" size="medium">Send</my-btn>
+    </div>
+  </span>
+</my-card>
+<my-card id="card-2" header="true" footer="true" size="large">
+  <span slot="header">My card-2</span>
+  <span slot="content">
+    <my-form>
+      <my-form-field
+        class="field"
+        name="id2"
+        label="Id2"
+        error="Field is required"
+        type="text"
+        size="medium"
+        color-label="orange"
+        color-input="dark-grey"
+      ></my-form-field>
+      <my-form-field
+        class="field"
+        name="name2"
+        label="Name2"
+        error="Field is required"
+        type="text"
+        size="medium"
+        color-label="orange"
+        color-input="dark-grey"
+      ></my-form-field>
+    </my-form>
+    <div class="btn">
+      <my-btn name="getData" color="light-green" size="medium">Send</my-btn>
+    </div>
+  </span>
+  <span slot="footer">My footer</span>
+</my-card>

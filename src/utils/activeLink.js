@@ -1,5 +1,4 @@
 export const activeLink = (optionalCurrentActiveLink, targetLink) => {
-  console.log(optionalCurrentActiveLink);
   optionalCurrentActiveLink.classList.remove('active');
   targetLink.classList.add('active');
 };

@@ -1,4 +1,4 @@
-@import './variables.scss';
+@use './variables';
 
 @mixin colorBtn($color) {
   background-color: $color;
@@ -8,18 +8,45 @@
   }
   &:active {
     background-color: darken($color, 4%);
-    box-shadow: 0 2px $greyShadow;
+    box-shadow: 0 2px variables.$greyShadow;
     transform: translateY(4px);
   }
 }
 
 @mixin disabledBtn {
-  border: 1px solid $greyShadow;
-  background-color: $disabledBg;
-  color: $disabledColor;
+  border: 1px solid variables.$greyShadow;
+  background-color: variables.$disabledBg;
+  color: variables.$disabledColor;
   &:hover {
-    border: 1px solid $greyShadow;
-    background-color: $disabledBg;
-    color: $disabledColor;
+    border: 1px solid variables.$greyShadow;
+    background-color: variables.$disabledBg;
+    color: variables.$disabledColor;
+  }
+}
+
+@mixin colorLabel($color) {
+  .form-control {
+    &:focus,
+    &.has-value {
+      border-color: $color;
+      transition: all 0.2s ease-out;
+      + label {
+        color: $color;
+      }
+    }
+    &.has-value:not(:focus) + label {
+      color: rgba($color, $alpha: 0.6);
+    }
+  }
+}
+
+@mixin colorInput($color) {
+  .form-field {
+    .form-control {
+      border-color: $color;
+    }
+    label {
+      color: $color;
+    }
   }
 }
