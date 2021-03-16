@@ -3,7 +3,7 @@ import buttonlayout from './button.html';
 import eventBus from '../../../utils/eventBus';
 import { renderWebComponent } from '../../../utils/render';
 
-class Button extends HTMLElement {
+export default class Button extends HTMLElement {
   constructor() {
     super();
     renderWebComponent(buttonlayout, buttonStyle, this);
@@ -73,5 +73,3 @@ class Button extends HTMLElement {
     });
   }
 }
-
-export default Button;

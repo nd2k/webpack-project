@@ -108,9 +108,8 @@ export default class FormField extends HTMLElement {
         this.formControl.classList.remove('has-value');
       }
     });
-    this.inputEl.addEventListener('input', (event) => {
-      const value = event.target.value;
-      this.formControl.setAttribute('name', this.name);
+    this.labelEl.addEventListener('click', () => {
+      this.formControl.classList.add('has-value');
     });
   }
 

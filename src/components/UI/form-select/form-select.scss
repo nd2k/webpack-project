@@ -1,0 +1,60 @@
+@use '../../../styles//variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.form-select {
+  display: flex;
+  label {
+    width: 20%;
+  }
+  select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    border-bottom: 1px solid variables.$dark-grey;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-areas: 'select';
+    &::-ms-expand {
+      display: none;
+    }
+    &::after {
+      content: '';
+      width: 0.8em;
+      height: 0.5em;
+      background-color: black;
+      clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+  }
+}
+
+// .select {
+//   width: 100%;
+//   // min-width: 15ch;
+//   // max-width: 30ch;
+//   border-bottom: 1px solid orange;
+//   border-radius: 0.25em;
+//   padding: 0.25em 0.5em;
+//   cursor: pointer;
+//   line-height: 1.1;
+//   background-color: #fff;
+//   background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+//   display: grid;
+//   ::after {
+//     content: '';
+//     width: 0.8em;
+//     height: 0.5em;
+//     background-color: black;
+//     clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+//   }
+// }

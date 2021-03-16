@@ -1,3 +1,43 @@
 my-card {
-  margin: 1rem
+  margin: 1rem;
+  list-expense {
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+my-modal {
+  .modal-header {
+    padding: 1rem;
+  }
+  add-expense {
+    .modal-content {
+      padding: 2rem 4rem;
+      .top-part {
+        padding: 2rem 0;
+        width: 100%;
+      }
+      .bottom-part {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        padding-bottom: 2rem;
+        .description {
+          width: 25rem;
+        }
+        .amount {
+          width: 10rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .addExpenseBtn {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
 }

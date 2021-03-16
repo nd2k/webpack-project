@@ -1,61 +1,65 @@
 <my-card header="true" footer="false" size="large">
-  <span slot="header">Enter a new expense</span>
+  <span slot="header">Liste des dépense</span>
   <span slot="content">
-    <my-form>
-      <my-form-field
-        class="field"
-        name="id"
-        label="Id"
-        error="Field is required"
-        type="password"
-        size="medium"
-        color-label="orange"
-        color-input="dark-grey"
-      ></my-form-field>
-      <my-form-field
-        class="field"
-        name="name"
-        label="Name"
-        error="Field is required"
-        type="password"
-        size="medium"
-        color-label="orange"
-        color-input="dark-grey"
-      ></my-form-field>
-    </my-form>
-    <div class="btn">
-      <my-btn name="getData" color="light-green" size="medium">Send</my-btn>
-    </div>
+    <list-expense>
+      <div class="btn">
+        <my-btn name="open-modal" color="dark-green" size="large">
+          Entrez une dépense
+        </my-btn>
+      </div>
+    </list-expense>
   </span>
 </my-card>
-<my-card id="card-2" header="true" footer="true" size="large">
-  <span slot="header">My card-2</span>
+
+<my-modal>
+  <span slot="header">
+    <div class="modal-header">Ajouter une dépense</div></span
+  >
   <span slot="content">
-    <my-form>
-      <my-form-field
-        class="field"
-        name="id2"
-        label="Id2"
-        error="Field is required"
-        type="text"
-        size="medium"
-        color-label="orange"
-        color-input="dark-grey"
-      ></my-form-field>
-      <my-form-field
-        class="field"
-        name="name2"
-        label="Name2"
-        error="Field is required"
-        type="text"
-        size="medium"
-        color-label="orange"
-        color-input="dark-grey"
-      ></my-form-field>
-    </my-form>
-    <div class="btn">
-      <my-btn name="getData" color="light-green" size="medium">Send</my-btn>
-    </div>
+    <add-expense>
+      <div class="modal-content">
+        <div class="top-part">
+          <my-data-list
+            class="field"
+            name="expenseType"
+            listId="expenseList"
+            label="Entrer un type de dépense"
+            options="Energie,Restaurant"
+          ></my-data-list>
+        </div>
+        <div class="bottom-part">
+          <div class="description">
+            <my-form-field
+              class="field"
+              name="expenseDescription"
+              label="Description"
+              error="Field is required"
+              type="text"
+              size="large"
+              color-label="orange"
+              color-input="dark-grey"
+            ></my-form-field>
+          </div>
+          <div class="amount">
+            <my-form-field
+              class="field"
+              name="expenseAmount"
+              label="Montant"
+              error="Field is required"
+              type="text"
+              size="large"
+              color-label="orange"
+              color-input="dark-grey"
+            ></my-form-field>
+            <div class="euro">€</div>
+          </div>
+        </div>
+        <div class="addExpenseBtn">
+          <my-btn name="create-expense" color="light-green" size="medium"
+            >Sauver</my-btn
+          >
+        </div>
+      </div>
+    </add-expense>
   </span>
-  <span slot="footer">My footer</span>
-</my-card>
+</my-modal>

@@ -76,4 +76,13 @@
   &.black-input {
     @include mixin.colorInput(variables.$black);
   }
+  &.short {
+    width: 30%;
+  }
+  &.medium {
+    width: 50%;
+  }
+  &.large {
+    width: 100%;
+  }
 }

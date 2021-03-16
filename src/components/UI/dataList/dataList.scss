@@ -1,0 +1,22 @@
+@use '../../../styles/variables';
+
+.dataList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  label {
+    width: 30%;
+  }
+  input {
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid variables.$dark-grey;
+    outline: none;
+    &:focus,
+    &.has-value {
+      border-color: variables.$orange;
+      border-width: 2px;
+      transition: all 0.2s ease-out;
+    }
+  }
+}
